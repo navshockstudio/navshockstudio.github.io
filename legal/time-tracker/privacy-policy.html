@@ -20,11 +20,9 @@
       --color-text-muted: #4b5563;
       --color-border: #e5e7eb;
       --color-accent: #0f172a;
-      /* Slate 900 */
       --color-link: #2563eb;
       --spacing-unit: 1.5rem;
       --max-width: 46rem;
-      /* aprox 736px para lectura óptima */
     }
 
     * {
@@ -41,14 +39,12 @@
       padding-bottom: 4rem;
     }
 
-    /* Contenedor central de lectura */
     .container {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 1.5rem;
     }
 
-    /* Header minimalista */
     header {
       padding-top: 5rem;
       padding-bottom: 3rem;
@@ -86,7 +82,6 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* Tipografía de contenido */
     main p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
@@ -100,6 +95,14 @@
       margin-top: 3.5rem;
       margin-bottom: 1.25rem;
       letter-spacing: -0.015em;
+    }
+
+    main h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
 
     main ul {
@@ -129,12 +132,10 @@
       border-bottom-color: var(--color-link);
     }
 
-    /* Caja de contacto sutil */
     .contact-box {
       margin-top: 4rem;
       padding: 2rem;
       background-color: #f8fafc;
-      /* Slate 50 muy suave */
       border: 1px solid var(--color-border);
       border-radius: 8px;
     }
@@ -149,7 +150,35 @@
       font-size: 1rem;
     }
 
-    /* Footer */
+    /* Nueva caja destacada para eliminación de datos */
+    .deletion-box {
+      margin-top: 2rem;
+      padding: 1.5rem 2rem;
+      background-color: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+    }
+
+    .deletion-box h3 {
+      margin-top: 0;
+      color: #92400e;
+    }
+
+    .deletion-box p {
+      color: #78350f;
+      margin-bottom: 1rem;
+    }
+
+    .deletion-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .deletion-box a {
+      color: #b45309;
+      font-weight: 600;
+    }
+
     footer {
       margin-top: 5rem;
       padding-top: 2rem;
@@ -159,7 +188,6 @@
       color: var(--color-text-muted);
     }
 
-    /* Utilidades de impresión */
     @media print {
       body {
         background-color: white;
@@ -170,12 +198,12 @@
         padding-top: 0;
       }
 
-      .contact-box {
+      .contact-box,
+      .deletion-box {
         border: 1px solid #ccc;
       }
     }
 
-    /* Responsividad */
     @media (max-width: 640px) {
       header {
         padding-top: 3rem;
@@ -297,7 +325,7 @@
           esté instalada y usted no los borre.
         </li>
         <li>
-          <strong>Eliminación:</strong> Usted puede eliminar sus datos en
+          <strong>Eliminación por el usuario:</strong> Usted puede eliminar sus datos en
           cualquier momento borrando los registros dentro de la app, limpiando
           el almacenamiento de la app desde los ajustes de Android, o
           desinstalando la aplicación. Una vez realizada esta acción, los
@@ -305,6 +333,32 @@
           externas.
         </li>
       </ul>
+
+      <div class="deletion-box">
+        <h3>📧 Solicitud de eliminación de datos</h3>
+        <p>
+          En <strong>NavShock Studio</strong> respetamos plenamente su derecho a la privacidad y 
+          al control de su información personal. Si desea solicitar la eliminación de cualquier 
+          dato que <strong>Time Tracker</strong> o los servicios de terceros integrados 
+          (como Google Play Services) pudieran haber recopilado —incluyendo, pero no limitado a: 
+          identificadores de publicidad, datos de diagnóstico, registros de errores o cualquier 
+          otra información técnica asociada a su uso de la aplicación— puede ejercer este derecho 
+          de las siguientes maneras:
+        </p>
+        <ul style="color: #78350f; margin-bottom: 1rem;">
+          <li><strong>Desde la aplicación:</strong> Acceda a Configuración → Eliminar todos los datos.</li>
+          <li><strong>Desinstalación:</strong> Al desinstalar la app, todos los datos locales se eliminan automáticamente.</li>
+          <li><strong>Por correo electrónico:</strong> Envíe su solicitud a 
+            <a href="mailto:navshockstudio@gmail.com">navshockstudio@gmail.com</a> indicando 
+            "Solicitud de eliminación de datos - Time Tracker" en el asunto.
+          </li>
+        </ul>
+        <p>
+          <strong>Plazo de respuesta:</strong> Procesaremos todas las solicitudes recibidas por 
+          correo electrónico en un plazo máximo de <strong>30 días hábiles</strong>. Recibirá 
+          una confirmación por escrito una vez completado el proceso de eliminación.
+        </p>
+      </div>
 
       <h2>6. Privacidad de menores</h2>
       <p>
@@ -314,7 +368,23 @@
         solicitamos edad ni datos demográficos.
       </p>
 
-      <h2>7. Cambios en la política</h2>
+      <h2>7. Derechos del usuario</h2>
+      <p>
+        De acuerdo con las normativas de protección de datos aplicables, usted tiene derecho a:
+      </p>
+      <ul>
+        <li><strong>Acceso:</strong> Conocer qué datos se han recopilado sobre usted.</li>
+        <li><strong>Rectificación:</strong> Corregir datos inexactos.</li>
+        <li><strong>Eliminación:</strong> Solicitar el borrado de sus datos personales.</li>
+        <li><strong>Portabilidad:</strong> Obtener una copia de sus datos en formato legible.</li>
+        <li><strong>Oposición:</strong> Oponerse al procesamiento de sus datos.</li>
+      </ul>
+      <p>
+        Para ejercer cualquiera de estos derechos, contáctenos a través de 
+        <a href="mailto:navshockstudio@gmail.com">navshockstudio@gmail.com</a>.
+      </p>
+
+      <h2>8. Cambios en la política</h2>
       <p>
         Podemos actualizar nuestra Política de Privacidad ocasionalmente para
         reflejar cambios funcionales o regulatorios. Se le notificará de
@@ -327,11 +397,15 @@
         <h2>Contacto</h2>
         <p>
           Si tiene preguntas técnicas o legales sobre esta Política de
-          Privacidad, puede contactar al equipo de desarrollo:
+          Privacidad, o desea ejercer sus derechos de privacidad, puede contactar 
+          al equipo de desarrollo:
         </p>
         <p>
           <strong>Correo electrónico:</strong>
           <a href="mailto:navshockstudio@gmail.com">navshockstudio@gmail.com</a>
+        </p>
+        <p>
+          <strong>Desarrollador:</strong> NavShock Studio
         </p>
       </div>
     </main>
